@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const add = ()=>{
+            let a=10,b=20;
+            console.log("Addition is "+(a+b));
+        }
+        const minus = (a,b)=>{
+            console.log("Minus is "+(a-b));
+        }
+        const cube = (a)=> {
+            return a*a*a;
+        }
+        // const cube1 = (b)=> b*b*b; //fat arrow function
+        const cube1 = b => console.log("cube1 is "+(b*b*b)); //fat arrow function
+        add()
+        minus(15,5)
+        console.log("Cube is "+cube(5));
+        // console.log("Cube1 is "+cube1(4));
+        
+        cube1(4)
+        // function add(){
+
+        // }
+    </script>
+</body>
+</html>

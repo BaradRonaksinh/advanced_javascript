@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr = [10,20,30,40,50];
+    let search =arr.filter((i)=>{
+        return i==20;
+        //return (i==20 || i==30)
+    })
+    console.log(search);
+    let len =search.length
+    if(len > 0){
+        document.write("20 is found <br>")
+    }else{
+        document.write("20 in not found <br>");
+    }
+
+    let new_arr =[1,2,3,4,5];
+    let sum = new_arr.reduceRight((total,i)=>{
+        console.log("Total  is "+total);
+        return total + i;
+    })//sum = sum +i
+    document.write("sum is "+sum)
+    //forEach ,map, reduce, reduceRight, filter
+
+
+    let search_1 = new_arr.includes((i)=>{
+        return i==3;
+    })
+    console.log(search_1);
+    let len2 = search_1.length;
+    if(len2 > 0){
+        document.write("30 is found <br>")
+    }else{
+        document.write("30 in not found <br>");
+    }
+//includes don't work aerrow fun
+</script>
+</html>

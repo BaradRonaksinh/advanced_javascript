@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+</body>
+<script>
+    const number =[2,4,9,5,7];
+    let tr = '<ul type="circle">';
+        number.forEach((i)=>{
+            tr += "<li>" +i+ "<li>"
+        })
+        tr += '<ul>';
+    document.getElementById("demo").innerHTML = tr;
+
+    let data = number.map((i)=>i*2);
+    console.log(data);
+    data.forEach((i)=> {
+        tr += "<li>" +i + "</li>";
+    })
+    tr += '<ul>';
+
+    document.getElementById("demo1").innerHTML = tr
+
+</script>
+</html>

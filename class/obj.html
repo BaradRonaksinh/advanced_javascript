@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <input type="text" name="search" id="" placeholder="--Search--"><br><br>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody id="allUserData">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    let obj = {
+        id:101,
+        name:"dsfd",
+        age:25
+    }
+    let arr_obj = [
+        {
+            id:101,
+            name:"dsfd",
+            age:25
+        },
+        {
+            id:102,
+            name:"test",
+            age:25
+        },
+        {
+            id:103,
+            name:"pqr",
+            age:22
+        },
+        {
+            id:104,
+            name:"abcbd",
+            age:22
+        }
+    ]
+    let ans = arr_obj.filter((i)=>{
+            return i.age==22
+    })
+    console.log(ans);
+    let tbl = '';
+    arr_obj.map((i)=>{
+        tbl += `<tr>
+                    <td>${i.id}</td>
+                    <td>${i.name}</td>
+                    <td>${i.age}</td>
+                </tr>`
+    })
+    document.getElementById('allUserData').innerHTML = tbl
+
+</script>
+</html>
