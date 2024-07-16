@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="search" placeholder="enter the name" name="" id="src_ic" oninput="searchData(this)">
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="allUserData">
+
+        </tbody>
+    </table>
+</body>
+<script>
+    let tbl = '';//table in first are empty..
+    let arr_obj = [
+        {
+            id: 101,
+            name: "ronak",
+            age: 21
+        },
+        {
+            id: 102,
+            name: "Ankit",
+            age: 22
+        },
+        {
+            id: 103,
+            name: "Vivek",
+            age: 20
+        },
+        {
+            id: 104,
+            name: "ricky",
+            age: 19
+        }
+    ]
+
+
+    const searchData = (e) => {
+        console.log(e);
+        console.log(e.id);
+        let txt = e.value;
+        console.log(txt);
+        let arr1 = arr_obj.filter((i) => {
+            //i.name = test.includes(t)
+
+            if (i.name.toUpperCase().includes(txt) ||
+            i.name.toLowerCase().includes(txt) ||
+            i.age.toString().includes(txt) ||
+            i.id.toString().includes(txt)){
+                return i;
+            } else {
+                return '';
+            }
+        })
+
+        disp(arr1);
+
+    }
+
+    const disp = (arr_obj) => {
+
+        //create a table data using map function...
+        arr_obj.map((i) => {
+
+            tbl += `<tr>
+                <td>${i.id}</td> 
+                <td>${i.name}</td> 
+                <td>${i.age}</td>
+            </tr>`
+        })
+        document.getElementById('allUserData').innerHTML = tbl;
+        tbl = ''
+    }
+    disp(arr_obj)
+
+
+
+
+
+
+
+</script>
+
+</html>

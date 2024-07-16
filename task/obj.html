@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searching name</title>
+</head>
+<body>
+    <input type="search" placeholder="enter the name" name="" id="src_ic" >
+    <button class="" onclick="searx()">Search</button>
+    <!-- oninput="(this)" -->
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>age</th>
+            </tr>
+        </thead>
+        <tbody id="insultData">
+            
+        </tbody>
+    </table>
+</body>
+<script>
+    let array_obj = [
+        {
+            id:101,
+            name:"ronak",
+            age:21,
+        },
+        {
+            id:102,
+            name:"daksh",
+            age:14,
+        },
+        {
+            id:103,
+            name:"sneh",
+            age:17
+        },
+        {
+            id:104,
+            name:"avantik",
+            age:20
+        },
+        {
+            id:105,
+            name:"jay",
+            age:19
+        }
+    ]
+
+    let ty = document.getElementById("src_ic").value;
+    console.log(array_obj);
+
+    let ans = array_obj.filter((i)=>{
+        if(ty == i.name){
+            return i.name;
+        }
+    })
+    //console.log()
+    let searx = ((e)=>{
+        ty == e.value;
+        document.write(ty);
+    })
+    console.log(ans);
+    console.log(typeof(ans))
+
+    let show = ``;
+
+    array_obj.map((i)=>{
+        show += `<tr>
+                    <td>${i.id}</td>
+                    <td>${i.name}</td>
+                    <td>${i.age}</td>
+        </tr>`
+    });
+
+    document.getElementById("insultData").innerHTML = show;
+
+</script>
+</html>
