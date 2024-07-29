@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btns{
+            /*display: flex;*/
+            justify-content: left;
+            align-items: baseline;
+            flex-direction: column;
+        }
+
+        input{
+            width: 240px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        button{
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Calculator</h3>
+    <input type="text" name="no" id="no">
+    <div class="btns">
+
+        <button onclick="disp(1)">1</button>
+        <button onclick="disp(2)">2</button>
+        <button onclick="disp(3)">3</button><br>
+        <button onclick="disp(4)">4</button>
+        <button onclick="disp(5)">5</button>
+        <button onclick="disp(6)">6</button><br>
+        <button onclick="disp(7)">7</button>
+        <button onclick="disp(8)">8</button>
+        <button onclick="disp(9)">9</button><br>
+        <button onclick="disp(0)">0</button>
+        <button onclick="disp('/')">/</button>
+        <button onclick="disp('*')">*</button><br>
+        <button onclick="disp('+')">+</button>
+        <button onclick="disp('-')">-</button>
+        <button onclick="finalAns()">=</button><br>
+        <button onclick="allClr()">AC</button>
+        <button onclick="digClr()">X</button>
+
+    </div>
+</body>
+<script src="cals.js"></script>
+
+</html>

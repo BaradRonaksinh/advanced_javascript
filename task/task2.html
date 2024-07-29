@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //q.1    map function used
+    var arr = [1,2,3,4,5];
+    for(let i=0;i<=4;i++){
+        var new_arr= arr[i]+10;
+        console.log(new_arr);
+    }
+
+    for(let i = 0;i<=4;i++){//filter method
+        if((arr[i]+1) % 2 != 0){
+            console.log(arr[i])
+        }
+    }
+
+    let user_arr = [
+        {
+            id:"101",
+            name:"ronak",
+            age:21,
+            salary:25000
+        },
+        {
+            id:"102",
+            name:"pranav",
+            age:20,
+            salary:10000
+        },
+        {
+            id:"103",
+            name:"pla",
+            age:21,
+            salary:22000
+        },
+        {
+            id:"104",
+            name:"nii",
+            age:21,
+            salary:20000
+        }
+    ]
+
+       
+
+    let names = user_arr.map((i) => {
+        console.log(i.name)
+        }
+    );
+    
+    let ages = user_arr.map(i => 
+        console.log(i.age)
+        
+    );
+
+    //let salaryes = user_arr.map(i => i.salary);
+
+    for(let i =0;user_arr.length;i++){
+        if(user_arr[i].salary > 15000){
+            console.log(user_arr[i].name + "is rich");
+        }
+    }
+    
+
+    
+
+    // Q.3
+     let num = [5,10,20,100,60,1];
+     
+     let maxNum = num[0];
+
+     for(let i = 1; i< num.length; i++){
+        if(num[i] > maxNum){
+            maxNum = num[i];
+        }
+     }
+     console.log("max num is "+maxNum);
+
+   
+
+</script>
+</html>

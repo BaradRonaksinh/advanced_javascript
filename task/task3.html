@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello</p>
+    <p>ajcjdsbcjab</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique et enim officiis?</p>
+    
+</body>
+<script>
+let a = document.querySelectorAll("p");
+
+console.log(a.length);
+console.log(typeof a);
+let b  = a.forEach((i) => {
+    return i.innerText;
+})
+console.log(b);
+
+let ab = a.forEach((i)=>{
+    console.log(i.innerHTML);
+})
+
+//for(let i =0; i<a.length;i++ ){
+  //  console.log(a[i].innerHTML);
+//}
+</script>
+</html>
