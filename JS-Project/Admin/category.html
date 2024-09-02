@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h3>registration form</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" name="catfrm">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Category</label>
+                      <input type="text" class="form-control" id="catname"  placeholder="Enter category" name="catname">
+                      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="saveData()">save</button>
+                    <!-- <button type="button" class="btn btn-primary" onclick="disTable()">show Table</button> -->
+                  </form>
+            </div>
+            <div class="col-md-6">
+                <table class="table" border="2">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Action</th>
+                        <!-- <th scope="col">Handle</th> -->
+                      </tr>
+                    </thead>
+                    <tbody id="catData">
+           
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="category.js"></script>
+</html>
