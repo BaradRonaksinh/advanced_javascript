@@ -16,6 +16,8 @@ let saveproduct = ()=>{
     let pro_len = pro_data != null ? pro_data.length + 1:1
     let pro_name = document.profrm.pname.value;
     let pro_price = document.profrm.price.value;
+    //cat_id baki 6
+    let catId =  document.profrm.cat_id.value;
     let catname = document.profrm.catname.value;
     let img_get  = localStorage.getItem("pro_img")
     let edit_pro = document.profrm.proid.value;
