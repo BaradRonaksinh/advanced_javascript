@@ -17,7 +17,7 @@ let saveproduct = ()=>{
     let pro_name = document.profrm.pname.value;
     let pro_price = document.profrm.price.value;
     //cat_id baki 6
-    let catId =  document.profrm.cat_id.value;
+    // let catId =  document.profrm.cat_id.value;
     let catname = document.profrm.catname.value;
     let img_get  = localStorage.getItem("pro_img")
     let edit_pro = document.profrm.proid.value;
@@ -61,8 +61,10 @@ let saveproduct = ()=>{
 }
 let pr = ''
 
+
+// display products....
 const disp = ()=>{
-    pr = ''
+    pr = '';
     let pro_data = JSON.parse(localStorage.getItem("proInfo"))
     let cat_data = JSON.parse(localStorage.getItem('catInfo'))
     pro_data.map((i)=>{

@@ -84,3 +84,28 @@ usersMapped = [
 // let sumSalaries = salaries.value
 // alert( sumSalaries(salaries) ); // 650    --->  Baki he...
 
+// Destructuring assignment We have an object: Write the Destructuring assignment that
+// reads:
+// a) Name property into the variable name.
+// b) Year’s property into the variable age.
+// c) isAdmin property into the variable isAdmin (false, if no such property)
+// d) let user = { name: "John", years: 30};
+
+let userR = { //create a object
+    name : "ronak",
+    age : 21
+}
+
+let {name , age} = userR;
+
+
+// js object into JSON...
+
+let jsObj = {
+    name : "ronak",
+    age : 21,
+    sName : "barad"
+}
+
+let JsonObj = JSON.stringify(jsObj);
+console.log(JsonObj)
