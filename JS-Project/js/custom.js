@@ -8,7 +8,7 @@ let catData = JSON.parse(localStorage.getItem('catInfo'));
 let j = 2;
 catData.map((i) => {
     tr += `<li class="nav-item">
-                <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
+                <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-${j++}">
                     <span class="text-dark" style="width: 130px;">${i.name}</span>
                 </a>
             </li>`;
@@ -153,16 +153,16 @@ let pr = `<div id="tab-1" class="tab-pane fade show p-0 active">
                             </div>
                         </div>`;
 
-let k =2;
+let k = 2;
 let prData = JSON.parse(localStorage.getItem('proInfo'))
 catData.map((i) => {
     pr += `<div id="tab-${k++}" class="tab-pane fade show p-0">
                             <div class="row g-4">
                                 <div class="col-lg-12">
                                     <div class="row g-4">`
-            prData.map((j) => {
-                if(i.id == j.id){
-                    pr += `<div class="col-md-6 col-lg-4 col-xl-3">
+    prData.map((j) => {
+        if (i.id == j.catname) {
+            pr += `<div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
                                                     <img src="${j.pro_img}" class="img-fluid w-100 rounded-top" alt="">
@@ -178,9 +178,9 @@ catData.map((i) => {
                                                 </div>
                                                 </div>
                                             </div>`
-                }
-            })         
-                                        
+        }
+    })
+
     pr += `</div>
                                 </div>
                             </div>
