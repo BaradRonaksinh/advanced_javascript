@@ -17,7 +17,7 @@ let saveproduct = () => {
     let pro_name = document.profrm.pname.value;
     let pro_price = document.profrm.price.value;
     //cat_id baki 6
-    // let catId =  document.profrm.cat_id.value;
+    let catId =  document.profrm.cat_id.value;
     let catname = document.profrm.catname.value;
     let img_get = localStorage.getItem("pro_img")
     let edit_pro = document.profrm.proid.value;
@@ -41,7 +41,7 @@ let saveproduct = () => {
             id: pro_len,
             pro_name: pro_name,
             pro_price: pro_price,
-            catname: catname,
+            cat_id: catId,
             pro_img: img_get
         }
 
@@ -69,7 +69,7 @@ const disp = () => {
     let catData = JSON.parse(localStorage.getItem('catInfo'))
     pro_data.map((i) => {
         catData.map((j) => {
-            if (j.id == i.catname) {
+            if (j.id == i.cat_id) {
                 i.name = j.name
             }
         })
@@ -79,7 +79,7 @@ const disp = () => {
                 <td>${i.id}</td>
                 <td>${i.pro_name}</td>
                 <td>${i.name}</td>
-                <td>${i.pro_price}</td>
+                <td>${i.price}</td>
                 <td><img src=${i.pro_img} height="50px"></td>
                 <td><button class="btn btn-danger" onclick="deletePro(${i.id})">Delete</button><br><br>
                 <button class="btn btn-primary m-2" onclick="editPro(${i.id})">Edit</button></td>

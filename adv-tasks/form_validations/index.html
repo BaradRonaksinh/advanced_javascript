@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>form validations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Form Validation</h1>
+
+    <!-- form -->
+    <div class="frm-shpe">
+
+        <form class="frm" name="frm" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="exampleInputPassword1">UserName:</label>
+                <input type="text" class="form-control" id="unameId" name="uname" placeholder="Username">
+                <small id="userHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address:</label>
+                <input type="email" class="form-control" name="ename" id="enameId" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password:</label>
+                <input type="password" name="pname" class="form-control" id="passId" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Confirm Password:</label>
+                <input type="password" name="cnfPname" class="form-control" id="cnfPassId" placeholder="Password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+    <!-- form-end -->
+
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

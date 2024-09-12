@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    gap: 0;
+}
+
+
+
+.frm{
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    /* text-align: center; */
+    justify-content: center;
+}
+
+/* .frm-shpe{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+} */

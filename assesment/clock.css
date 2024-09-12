@@ -1,0 +1,82 @@
+/* clock */
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #000;
+}
+
+h1 {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.clock {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.day {
+    color: rgb(192, 192, 209);
+    font-family: "Handjet", sans-serif;
+    background-color: rgb(7, 7, 7);
+    width: 350px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: 2px solid rgb(94, 97, 97);
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+
+.day>label {
+    margin: 0px 5px 0px 5px;
+    font-size: 30px;
+}
+
+.time {
+    color: rgb(238, 238, 228);
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 500;
+    font-style:normal;
+    font-variation-settings:
+        "ELGR" 1,
+        "ELSH" 2;
+    background-color: rgb(9, 10, 2);
+    width: 250px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: 2px solid rgb(94, 97, 97);
+    border-radius: 05px;
+    margin-bottom: 10px;
+
+}
+
+.time>label {
+    margin: 0px 5px 0px 5px;
+    font-size: 30px;
+}
